@@ -1,0 +1,32 @@
+c_compiler:
+- gcc
+c_compiler_version:
+- '7'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cran_mirror:
+- https://cran.r-project.org
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
+libblas:
+- 3.8 *netlib
+liblapack:
+- 3.8.0 *netlib
+mkl:
+- '2019'
+pin_run_as_build:
+  mkl:
+    max_pin: x
+  r-base:
+    min_pin: x.x
+    max_pin: x.x
+r_base:
+- '4.0'
+target_platform:
+- linux-64
