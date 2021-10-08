@@ -1,4 +1,4 @@
-{% set version = "0.9-19" %}
+{% set version = "0.9-20" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dbarts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dbarts/dbarts_{{ version }}.tar.gz
-  sha256: 6c7eed2d238ab4d8ebcd624e05a68849fa57bf2929b893bcd1a0990b5fcc304d
+  sha256: 1d75e795812819b7637d38fc909f4d7942bddf359acfb40a7b8e7cd167a5e92a
 
 build:
   merge_build_host: true  # [win]
