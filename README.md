@@ -3,6 +3,7 @@ About r-dbarts-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dbarts-feedstock/blob/main/LICENSE.txt)
 
+
 About r-dbarts
 --------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/vdorie/dbarts
 Package license: GPL-2.0-or-later
 
 Summary: Fits Bayesian additive regression trees (BART; Chipman, George, and McCulloch (2010) <doi:10.1214/09-AOAS285>) while allowing the updating of predictors or response so that BART can be incorporated as a conditional model in a Gibbs/Metropolis-Hastings sampler. Also serves as a drop-in replacement for package 'BayesTree'.
+
 About r-dbarts
 --------------
 
