@@ -1,4 +1,4 @@
-{% set version = "0.9-26" %}
+{% set version = "0.9-28" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dbarts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dbarts/dbarts_{{ version }}.tar.gz
-  sha256: bea5bb323c647761b575b805f4f7027f2718facab4ed5db1b1bc8f40e40fe5d0
+  sha256: d2e4b4ee1c191e7c506be3fec5a5e877c1b36754cba558bd75eaac9cc6ac0138
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("c") }}                # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
