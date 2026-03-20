@@ -1,4 +1,4 @@
-{% set version = "0.9-32" %}
+{% set version = "0.9-33" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dbarts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dbarts/dbarts_{{ version }}.tar.gz
-  sha256: ce8eed27c7ffa72548e08e6221c4ecee0ce32b33c4bcc67d278acf23d9f4a2f9
+  sha256: d228b5015a537aeb99835af9e228c0963f37ae60e4e721c39308da2e4dcc085a
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,7 +51,8 @@ test:
 about:
   home: https://github.com/vdorie/dbarts
   license: GPL-2.0-or-later
-  summary: Fits Bayesian additive regression trees (BART; Chipman, George, and McCulloch (2010) <doi:10.1214/09-AOAS285>) while allowing the updating of predictors or response so that BART can be incorporated as a conditional model in a Gibbs/Metropolis-Hastings sampler. Also serves as a drop-in replacement for package 'BayesTree'.
+  summary: Fits Bayesian additive regression trees (BART; Chipman, George, and McCulloch (2010) <doi:10.1214/09-AOAS285>) while allowing the updating of predictors or response so that BART can be incorporated as a conditional model in a Gibbs/Metropolis-Hastings sampler. Also serves as a drop-in replacement for package
+    'BayesTree'.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
