@@ -1,15 +1,15 @@
-{% set version = "0.9-33" %}
+{% set version = "0.9-34" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-dbarts
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/dbarts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dbarts/dbarts_{{ version }}.tar.gz
-  sha256: d228b5015a537aeb99835af9e228c0963f37ae60e4e721c39308da2e4dcc085a
+  sha256: b0edcbde48836547000d507c51dbcd595d217f1fe3844838b32f40f738865e34
 
 build:
   number: 0
